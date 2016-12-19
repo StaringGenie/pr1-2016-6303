@@ -59,16 +59,6 @@ void removeEl(MusicalComposition* head, char* name_for_remove)
             if(actual->next != NULL && actual->prev != NULL)
             {
                 actual->prev->next = actual->next;
-                actual->next->prev = actual->prev;
-            }
-            else if(actual->next == NULL)
-            {
-                actual->prev->next = NULL;
-            }
-            else if(actual->prev == NULL)
-            {
-                actual->prev = NULL;
-                *head = *actual;
             }
         }
         actual = actual->next;
